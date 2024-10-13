@@ -1,0 +1,38 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>AtCoder鉄則がんばり記</h1>
+			<p>
+				このブログは<a href="https://atcoder.jp/users/similer">私</a>が<a href="https://atcoder.jp/contests/tessoku-book">AtCoderの鉄則</a>をがんばっていることを示すために公開します。
+				（誰かに見せるため用ではないのだが...）
+				ついでに<a href="https://astro.build/">Astro</a>でブログを書く練習も兼ねています。
+				（こちらが本命まである）
+				将来見たら恥ずかしくなりそうだが、何も考えずにやることにする。
+			</p>
+			<p>
+				ちょくちょく更新するので出来は適当だが、ひまなときにグレードアップを狙う。
+			</p>
+			<p>以下、直近の更新(仮)</p>
+			<ul>
+				<li><FormattedDate date={new Date("2024-10-13")}/> Astroのブログテンプレートで作ったので、とりあえずテンプレのページだけ置いておく。記事はまた今度。</li>
+			</ul>
+			<p>
+				あと、私のGitHubのアカウントはページ右上または下のアイコンから。
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
